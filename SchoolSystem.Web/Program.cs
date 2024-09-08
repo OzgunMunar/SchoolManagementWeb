@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using SchoolSystem.Application;
 using SchoolSystem.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,8 +23,8 @@ builder.Services.ConfigureApplicationCookie(option =>
 });
 
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 //builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-//builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 
