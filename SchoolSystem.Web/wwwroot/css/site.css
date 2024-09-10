@@ -1,11 +1,35 @@
+:root {
+    /* From 70% to 60% Primary Color. */
+    --oc-primarysoft: #68a4fd;
+    --oc-primaryvivid: #3585fd;
+    /* From 70% to 60% Red Color. */
+    --oc-redsoft: #e87d88;
+    --oc-redvivid: #e05260;
+    /* From 70% to 60% Yellow Color. */
+    --oc-yellowsoft: #ffd966;
+    --oc-yellowvivid: #ffcc33;
+    /* From 70% to 60% Green Color. */
+    --oc-greensoft: #7ee7b6;
+    --oc-greenvivid: #53df9e;
+    /* From 70% to 60% Info Color. */
+    --oc-aquasoft: #6ee0f7;
+    --oc-aquavivid: #3dd6f5;
+
+    --bs-font-sans-serif: "Roboto", serif;
+    --bs-body-font-size: 1rem;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    /*font-size: 16px;*/
   }
+    .topinfobar{
+        display: none;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -18,5 +42,70 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: whitesmoke !important;
+}
+
+.softblue-bgcolor {
+    background-color: var(--oc-primarysoft) !important;
+}
+
+.softblue-bgcolor:hover {
+    background-color: var(--oc-primaryvivid) !important;
+}
+
+.softred-bgcolor {
+    background-color: var(--oc-redsoft);
+}
+
+.softred-bgcolor:hover {
+    background-color: var(--oc-redvivid);
+}
+
+.softyellow-bgcolor {
+    background-color: var(--oc-yellowsoft);
+}
+
+.softyellow-bgcolor:hover {
+    background-color: var(--oc-yellowvivid);
+}
+
+.softgreen-bgcolor {
+    background-color: var(--oc-greensoft);
+}
+
+.softgreen-bgcolor:hover {
+    background-color: var(--oc-greenvivid);
+}
+
+.softaqua-bgcolor {
+    background-color: var(--oc-aquasoft);
+}
+
+.softaqua-bgcolor:hover {
+    background-color: var(--oc-aquavivid);
+}
+
+.carousel-image {
+    object-fit: cover;
+    height: 60vh; 
+    width: 100%; 
+}
+
+.break-word {
+    overflow-wrap: break-word; /* Allows breaking long words */
+    hyphens: auto; /* Automatically adds hyphens for word breaks */
+}
+
+.navbar-links {
+    transition: color ease 0.5s !important;
+    position: relative;
+}
+
+.navbar-links:hover {
+    color: var(--oc-primaryvivid) !important;
+}
+
+.navbar {
+    background-color: white !important;
 }

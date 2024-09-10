@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSystem.Web", "SchoolSystem.Web\SchoolSystem.Web.csproj", "{A09D8200-9F13-42DA-B2FF-B676D7CA24D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolSystem.Web", "SchoolSystem.Web\SchoolSystem.Web.csproj", "{A09D8200-9F13-42DA-B2FF-B676D7CA24D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSystem.Infrastructure", "SchoolSystem.Infrastructure\SchoolSystem.Infrastructure.csproj", "{49921DCC-7B4C-434C-B4A9-117051DA4346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolSystem.Infrastructure", "SchoolSystem.Infrastructure\SchoolSystem.Infrastructure.csproj", "{49921DCC-7B4C-434C-B4A9-117051DA4346}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSystem.Domain", "SchoolSystem.Domain\SchoolSystem.Domain.csproj", "{CA4B1125-639C-445A-9834-9178F589E94E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolSystem.Domain", "SchoolSystem.Domain\SchoolSystem.Domain.csproj", "{CA4B1125-639C-445A-9834-9178F589E94E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSystem.Application", "SchoolSystem.Application\SchoolSystem.Application.csproj", "{2358E25F-D01E-4395-9CA6-1891AA3AF417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolSystem.Application", "SchoolSystem.Application\SchoolSystem.Application.csproj", "{2358E25F-D01E-4395-9CA6-1891AA3AF417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3134C048-EBBA-49C5-8F10-C9149277C228}"
+	ProjectSection(SolutionItems) = preProject
+		What_Will_I_Add.txt = What_Will_I_Add.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

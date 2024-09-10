@@ -1,0 +1,67 @@
+Things I wanna add ongoing days
+
+1. User Management
+Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent, and Support Staff. Manage permissions for different actions based on roles.
+User Profiles: Allow users to update their profiles, including contact information, profile pictures, etc.
+
+
+2. Student Management
+Student Enrollment: Register new students, manage their profiles, and handle enrollment in courses.
+Attendance Tracking: Record and track student attendance, with options for excused and unexcused absences.
+Grades and Reports: Manage student grades, generate report cards, and track academic performance.
+Behavior and Discipline: Track student behavior incidents and disciplinary actions.
+
+
+3. Course and Curriculum Management
+Course Creation: Create and manage courses, including course descriptions, schedules, and prerequisites.
+Curriculum Management: Define and manage the curriculum for different grades or departments.
+
+
+4. Teacher Management
+Teacher Profiles: Manage teacher profiles, including contact information, qualifications, and teaching schedules.
+Class Assignments: Assign teachers to classes and manage their teaching loads.
+
+
+5. Timetable Management
+Class Schedules: Create and manage class schedules, including times, locations, and teachers.
+Exam Schedules: Plan and manage examination schedules.
+
+
+6. Financial Management
+Fees Management: Handle student fee collection, payment tracking, and fee reports.
+Expense Tracking: Manage and track school expenses.
+
+
+7. Communication and Notifications
+Announcements: Post school-wide announcements and notifications.
+Messaging System: Enable communication between teachers, students, and parents through a messaging system.
+
+
+8. Library Management
+Book Catalog: Manage a catalog of books, including check-in and check-out functions.
+Student Book Loans: Track books borrowed by students and their due dates.
+
+
+9. Event Management
+School Events: Create and manage events such as sports days, parent-teacher meetings, and extracurricular activities.
+Event Scheduling: Coordinate event schedules and manage registrations.
+
+
+10. Parent Portal
+Student Progress: Allow parents to view their child’s grades, attendance, and behavior reports.
+Communication: Facilitate communication between parents and teachers.
+
+
+11. Health and Safety
+Medical Records: Manage student health records, allergies, and emergency contacts.
+Incident Reporting: Track health-related incidents or accidents that occur at school.
+
+
+12. Administration and Reporting
+Analytics and Reports: Generate reports on various aspects of the school, such as attendance, performance, and financials.
+Admin Dashboard: Create a central dashboard for administrators to manage all aspects of the system.
+
+
+13. Integration Capabilities
+API Integrations: Provide APIs for integration with other systems or external services.
+Data Import/Export: Allow importing and exporting of data for ease of use.
