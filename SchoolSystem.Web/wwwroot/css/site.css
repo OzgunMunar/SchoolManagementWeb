@@ -100,7 +100,7 @@ body {
 }
 
 .navbar-links {
-    transition: color ease 0.4s !important;
+    transition: color ease 0.3s !important;
     position: relative;
 }
 

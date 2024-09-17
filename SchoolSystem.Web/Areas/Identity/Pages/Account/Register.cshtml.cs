@@ -70,6 +70,11 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            //[Required]
+            //[StringLength(25, ErrorMessage = "Username must be at least 5 and at max 25 characters long.", MinimumLength = 5)]
+            ////[DataType(DataType.Text)]
+            //[Display(Name = "UserName")]
+            //public string UserName { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
