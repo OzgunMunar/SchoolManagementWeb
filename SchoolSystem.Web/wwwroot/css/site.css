@@ -21,6 +21,10 @@
     --bs-body-font-size: 1rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 14px;
 }
@@ -38,14 +42,16 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+body {
+    background-color: whitesmoke !important;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
-body {
-    margin-bottom: 60px;
-    background-color: whitesmoke !important;
+.footer-part {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 .softblue-bgcolor {
