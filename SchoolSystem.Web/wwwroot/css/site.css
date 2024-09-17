@@ -1,4 +1,7 @@
 :root {
+    /*  */
+    --oc-secondarysoft: #EEAECA;
+
     /* From 70% to 60% Primary Color. */
     --oc-primarysoft: #68a4fd;
     --oc-primaryvivid: #3585fd;
@@ -14,7 +17,6 @@
     /* From 70% to 60% Info Color. */
     --oc-aquasoft: #6ee0f7;
     --oc-aquavivid: #3dd6f5;
-
     --bs-font-sans-serif: "Roboto", serif;
     --bs-body-font-size: 1rem;
 }
@@ -98,14 +100,21 @@ body {
 }
 
 .navbar-links {
-    transition: color ease 0.5s !important;
+    transition: color ease 0.4s !important;
     position: relative;
 }
 
 .navbar-links:hover {
-    color: var(--oc-primaryvivid) !important;
+    color: var(--oc-secondarysoft) !important;
 }
 
 .navbar {
     background-color: white !important;
+}
+
+.gradient-main-title {
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(24,113,226,0.5186449579831933) 150%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for browsers that do not support background-clip */
 }
