@@ -1,8 +1,14 @@
 Things I wanna add ongoing days
 
+Things I wanna add 19 September 2024
+Add Roles
+Register
+Redirect to different page when you login.
+Design left panel menu.
+
+
 1. User Management
 Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent. Manage permissions for different actions based on roles.
-User Profiles: Allow users to update their profiles, including contact information, profile pictures, etc.
 
 2. Student Management
 Student Enrollment: Register new students, manage their profiles, and handle enrollment in courses.

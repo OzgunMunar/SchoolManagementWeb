@@ -1,61 +1,83 @@
 
-Basic Information
+# Basic Information
 
 First Name
 Last Name
 Date of Birth
 Gender: Male, Female, Other.
 NationalityGuid
-Address: Street, City, State, ZIP/Postal Code.
+Profile Picture: URL or path to a profile image.
+AddressGuid
 Phone Number
 Email Address
 
+# Nationality
 
+NationalityGuid
+Nationality
+IsActive
+CreatedDate
+UpdatedDate
+CreatedByUserGuid
+UpdatedByUserGuid
 
+# AddressTable
 
+AddressGuid
+Address: Street, City, State, ZIP/Postal Code.
+UserGuid
+IsActive
+CreatedDate
+UpdatedDate
+CreatedByUserGuid
+UpdatedByUserGuid
 
+================================================
 
+# Enrollment Information
 
-Enrollment Information
-
+EnrollmentGuid
+UserGuid
 Enrollment Date
 Grade/Year: Current grade/year in school.
 Class/Section: Specific class or section the student belongs to.
 Program: E.g., Science, Arts, Commerce.
 Status: Active, Inactive, Graduated, etc.
 
-Academic Records
+# Academic Records Grade Table
 
 GPA/Grades: Current academic performance.
 Subjects Enrolled: List of subjects the student is taking.
 Attendance Records: Percentage of classes attended.
 Exam Results: Scores from various assessments.
 
-Parental/Guardian Information
+# Parental/Guardian Information Table
 
-Guardian Name
-Guardian Relationship: Parent, Guardian, etc.
-Guardian Phone Number
-Guardian Email Address
+ParentGuid
+Parent Name
+Parent Relationship: Parent, Guardian, etc.
+Parent Phone Number
+Parent Email Address
+ParentOfUserGuid  => For students
 
-Additional Information
+# Health Information Table
 
-Emergency Contact: Name and phone number of someone to contact in case of emergency.
+HealthInfoGuid
+UserGuid
+Allergy, sickness, medical care? etc.
+
+# Additional Information
+
++ Emergency Contact: Name and phone number of someone to contact in case of emergency.
 Health Information: Allergies, medical conditions, etc.
 Extracurricular Activities: Clubs, sports, etc.
 Disciplinary Records: Any records of disciplinary actions.
 
-Other Considerations
-
-Profile Picture: URL or path to a profile image.
-Notes: Any additional comments or notes from teachers or administrators.
-
 Database Design
-
-You can structure your database tables like this:
 
 Students Table: Store basic student information.
 Enrollments Table: Track enrollment history (student ID, grade/year, class, etc.).
 Grades Table: Record grades for each subject (student ID, subject ID, grade).
 Parents Table: Store guardian information.
 Attendance Table: Track attendance records.
+
