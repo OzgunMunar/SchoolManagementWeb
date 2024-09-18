@@ -1,9 +1,8 @@
 Things I wanna add ongoing days
 
 1. User Management
-Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent, and Support Staff. Manage permissions for different actions based on roles.
+Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent. Manage permissions for different actions based on roles.
 User Profiles: Allow users to update their profiles, including contact information, profile pictures, etc.
-
 
 2. Student Management
 Student Enrollment: Register new students, manage their profiles, and handle enrollment in courses.
