@@ -22,6 +22,8 @@ namespace SchoolSystem.Domain.Entities
         public DateTime UpdatedTime { get; set; } = DateTime.UtcNow;
         public Guid CreatedByUserGuid { get; set; }
         public Guid UpdatedByUserGuid { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
     }
 }
 
