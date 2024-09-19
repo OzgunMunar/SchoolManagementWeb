@@ -2,10 +2,12 @@ Things I wanna add ongoing days
 
 Things I wanna add 19 September 2024
 
-Add Roles
-Register
+Add Roles +
+Register 
 Redirect to different page when you login.
 Design left panel menu.
+
+
 
 
 1. User Management

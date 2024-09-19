@@ -21,17 +21,6 @@ UpdatedDate
 CreatedByUserGuid
 UpdatedByUserGuid
 
-# AddressTable
-
-AddressGuid
-Address: Street, City, State, ZIP/Postal Code.
-UserGuid
-IsActive
-CreatedDate
-UpdatedDate
-CreatedByUserGuid
-UpdatedByUserGuid
-
 ================================================
 
 # Enrollment Information

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace SchoolSystem.Domain.Entities
         public Guid CreatedByUserGuid { get; set; }
         public Guid UpdatedByUserGuid { get; set; }
 
-        public virtual ApplicationUser User { get; set; }
+        [ValidateNever]
+        public ICollection<ApplicationUser> Users { get; set; }
     }
 }
 

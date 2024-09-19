@@ -13,21 +13,15 @@ namespace SchoolSystem.Infrastructure.Data
         }
 
         public DbSet<Nationalities> Nationalities { get; set; }
-        public DbSet<Addresses> Adresses { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Addresses>()
-                .HasMany(relation => relation.User)
-                .WithOne(ad => ad.Addresses)
-                .HasForeignKey(us => us.AddressGuid);
-
             modelBuilder.Entity<Nationalities>()
-                .HasOne(u => u.User)
+                .HasMany(u => u.Users)
                 .WithOne(n => n.Nationalities)
-                .HasForeignKey<ApplicationUser>(us => us.NationalityGuid);
+                .HasForeignKey(us => us.NationalityGuid);
         }
 
     }

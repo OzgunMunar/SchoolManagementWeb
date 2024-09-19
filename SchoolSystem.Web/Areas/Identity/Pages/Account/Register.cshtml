@@ -11,27 +11,84 @@
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h2>Create a new account.</h2>
             <hr />
+            
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            
             <div class="form-floating mb-3">
                 <input asp-for="Input.Email" class="form-control" autocomplete="off" aria-required="true" placeholder="name@example.com" />
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
-          @*<div class="form-floating mb-3">
-                <input asp-for="Input.UserName" class="form-control" autocomplete="off" aria-required="true" placeholder="name_surname" />
-                <label asp-for="Input.UserName">FullName</label>
-                <span asp-validation-for="Input.UserName" class="text-danger"></span>
-            </div> *@
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="off" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="off" aria-required="true" placeholder="password" />
                 <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select">
+                    <option disabled selected>-- Select Role --</option>
+                </select>
+                <label asp-for="Input.Role">Pick a User Role</label>
+            </div>
+            
+            <div class="form-floating mb-3">
+                <input asp-for="Input.FirstName" class="form-control" autocomplete="off" aria-required="true" placeholder="First Name" />
+                <label asp-for="Input.FirstName">First Name</label>
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.LastName" class="form-control" aria-expanded="off" aria-required="true" placeholder="Last Name" />
+                <label asp-for="Input.LastName">Last Name</label>
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" aria-expanded="off" aria-required="true" placeholder="Phone Number" />
+                <label asp-for="Input.PhoneNumber">Phone Number</label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.BirthDay" class="form-control" aria-required="true" placeholder="Birth Day" value="@Model.DefaultBirthday" />
+                <label asp-for="Input.BirthDay">Birth Day</label>
+                <span asp-validation-for="Input.BirthDay" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="Input.Gender" asp-items="@Model.Input.GenderList" class="form-select">
+                    <option disabled selected>-- Select Gender --</option>
+                </select>
+                <label asp-for="Input.Gender">Pick a Gender</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="Input.NationalityGuid" asp-items="@Model.Input.NationalityList" class="form-select">
+                    <option disabled selected>-- Select Nationality --</option>
+                </select>
+                <label asp-for="Input.NationalityGuid">Pick a Nationality</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ProfilePictureURL" class="form-control" autocomplete="off" aria-required="false" placeholder="Profile Picture URL"/>
+                <label asp-for="Input.ProfilePictureURL">Profile Picture URL</label>
+                <span asp-validation-for="Input.ProfilePictureURL" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Address" class="form-control" aria-expanded="off" aria-required="true" placeholder="Address" />
+                <label asp-for="Input.Address">Address</label>
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>

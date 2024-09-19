@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolSystem.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using SchoolSystem.Infrastructure.Data;
 namespace SchoolSystem.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240919153539_ApplicatonRoleCleaned")]
+    partial class ApplicatonRoleCleaned
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -253,7 +256,8 @@ namespace SchoolSystem.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NationalityGuid");
+                    b.HasIndex("NationalityGuid")
+                        .IsUnique();
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -351,8 +355,8 @@ namespace SchoolSystem.Infrastructure.Migrations
             modelBuilder.Entity("SchoolSystem.Domain.Entities.ApplicationUser", b =>
                 {
                     b.HasOne("SchoolSystem.Domain.Entities.Nationalities", "Nationalities")
-                        .WithMany("Users")
-                        .HasForeignKey("NationalityGuid")
+                        .WithOne("User")
+                        .HasForeignKey("SchoolSystem.Domain.Entities.ApplicationUser", "NationalityGuid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -361,7 +365,8 @@ namespace SchoolSystem.Infrastructure.Migrations
 
             modelBuilder.Entity("SchoolSystem.Domain.Entities.Nationalities", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("User")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

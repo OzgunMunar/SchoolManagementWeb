@@ -9,6 +9,8 @@ namespace SchoolSystem.Domain.Entities
 {
     public class ApplicationRole : IdentityRole
     {
-        public string? Notes { get; set; }
+        public ApplicationRole() : base() { }
+
+        public ApplicationRole(string roleName) : base(roleName) { }
     }
 }
