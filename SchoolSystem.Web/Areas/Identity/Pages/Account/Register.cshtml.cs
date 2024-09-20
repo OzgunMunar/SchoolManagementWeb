@@ -121,11 +121,14 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
+            [Required]
+            [Display(Name = "Role")]
             public string Role { get; set; }
             [ValidateNever]
             public IEnumerable<SelectListItem> RoleList { get; set; }
 
             [Required]
+            [Display(Name = "Nationality")]
             public Guid NationalityGuid { get; set; }
 
             [ValidateNever]
@@ -149,34 +152,7 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
                 await _roleManager.CreateAsync(new ApplicationRole(StaticUserRoles.Role_Parent));
             }
 
-            Input = new()
-            {
-
-                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
-                {
-                    Text = i,
-                    Value = i
-                }),
-                NationalityList = _context.Nationalities.Select(x => new SelectListItem
-                {
-                    Value = x.NationalityGuid.ToString(),
-                    Text = x.Nationality
-                }),
-                GenderList = new List<SelectListItem>
-                {
-                    new SelectListItem
-                    {
-                        Text = "M",
-                        Value = "Male"
-                    },
-                    new SelectListItem
-                    {
-                        Text = "F",
-                        Value = "Female"
-                    }
-                }
-
-            };
+            InputFiller();
 
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -253,22 +229,41 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
                 }
             }
 
+            InputFiller();
             // If we got this far, something failed, redisplay form
             return Page();
         }
 
-        private ApplicationUser CreateUser()
+        public void InputFiller()
         {
-            try
+            Input = new()
             {
-                return Activator.CreateInstance<ApplicationUser>();
-            }
-            catch
-            {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
-                    $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
-                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
-            }
+
+                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                {
+                    Text = i,
+                    Value = i
+                }),
+                NationalityList = _context.Nationalities.Select(x => new SelectListItem
+                {
+                    Value = x.NationalityGuid.ToString(),
+                    Text = x.Nationality
+                }),
+                GenderList = new List<SelectListItem>
+                {
+                    new SelectListItem
+                    {
+                        Text = "M",
+                        Value = "Male"
+                    },
+                    new SelectListItem
+                    {
+                        Text = "F",
+                        Value = "Female"
+                    }
+                }
+
+            };
         }
 
         private IUserEmailStore<ApplicationUser> GetEmailStore()

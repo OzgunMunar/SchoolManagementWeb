@@ -2,12 +2,9 @@ Things I wanna add ongoing days
 
 Things I wanna add 19 September 2024
 
-Add Roles +
-Register +
 Redirect to different page when you login.
 Design left panel menu.
-
-
+After register, send an email to confirm they are they. If the user did not confirm the account, make a bootstrap 5 alert popup shows up.
 
 
 1. User Management
