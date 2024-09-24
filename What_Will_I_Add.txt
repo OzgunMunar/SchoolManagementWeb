@@ -1,12 +1,7 @@
 Things I wanna add ongoing days
 
-***After register, send an email to confirm they are they. If the user did not confirm the account, make a bootstrap 5 alert popup shows up.
-
-Design left panel menu.
-
-
-1. User Management
-Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent. Manage permissions for different actions based on roles.
+*** After register, send an email to confirm they are they. If the user did not confirm the account, make a bootstrap 5 alert popup shows up.
+*** Roles and Permissions: Define roles such as Admin, Teacher, Student, Parent. Manage permissions for different actions based on roles.
 
 2. Student Management
 Student Enrollment: Register new students, manage their profiles, and handle enrollment in courses.
@@ -63,8 +58,3 @@ Incident Reporting: Track health-related incidents or accidents that occur at sc
 12. Administration and Reporting
 Analytics and Reports: Generate reports on various aspects of the school, such as attendance, performance, and financials.
 Admin Dashboard: Create a central dashboard for administrators to manage all aspects of the system.
-
-
-13. Integration Capabilities
-API Integrations: Provide APIs for integration with other systems or external services.
-Data Import/Export: Allow importing and exporting of data for ease of use.

@@ -8,28 +8,7 @@ namespace SchoolSystem.Web.Controllers
     public class DashboardController : Controller
     {
 
-        //private readonly UserManager<ApplicationUser> userManager;
-
-        //public DashboardController(UserManager<ApplicationUser> _userManager)
-        //{
-        //    userManager = _userManager;
-        //}
-
-        //[Authorize]
-        //public async Task<IActionResult> Index()
-        //{
-
-        //    ApplicationUser user = await userManager.GetUserAsync(User);
-
-        //    if (user != null)
-        //    {
-        //        ViewBag.User = user;
-        //    }
-
-        //    return View();
-        //}
-
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index() 
         { 
             return View(); 
