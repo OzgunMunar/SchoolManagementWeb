@@ -1,0 +1,23 @@
+    @if (!signInManager.IsSignedIn(User))   // Not signed in
+    {
+        <partial name="_HeaderPartial"></partial>
+        <main class="d-flex flex-column flex-fill">
+            @RenderBody()
+        </main>
+        <partial name="_FooterPartial"></partial>
+    }       //sign in but gets back
+    else if (signInManager.IsSignedIn(User) && (currentController == "Home" && (currentAction == "Index" || currentAction == "AboutUs" || currentAction == "Privacy")))
+    {
+        <partial name="_HeaderPartial"></partial>
+        <main class="d-flex flex-column flex-fill">
+            @RenderBody()
+        </main>
+        <partial name="_FooterPartial"></partial>
+    } //signed in
+    else
+    {
+        <main class="d-flex flex-column flex-fill">
+            <partial name="_SideBarPartial"></partial>
+            @RenderBody()
+        </main>
+    }

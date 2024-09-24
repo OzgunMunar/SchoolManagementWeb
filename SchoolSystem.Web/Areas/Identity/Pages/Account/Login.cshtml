@@ -18,16 +18,24 @@
                         <form id="account" method="post">
                             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">@@</span>
-                                <input asp-for="Input.Email" class="form-control form-control-md" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">@@</span>
+                                    <input asp-for="Input.Email" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="Name@example.com" />
+                                </div>
+                                <div>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
                             </div>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
-                                <input asp-for="Input.Password" class="form-control form-control-md" autocomplete="current-password" aria-required="true" placeholder="password" />
-                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+                                    <input asp-for="Input.Password" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="Password" />
+                                </div>
+                                <div>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
                             </div>
 
                             <div class="checkbox mb-2">
@@ -38,7 +46,7 @@
                             </div>
 
                             <div class="form-floating mb-3 w-100 d-flex justify-content-center align-items-center">
-                                <button id="login-submit" type="submit" class="w-50 btn btn-lg rounded-0 softblue-bgcolor text-white">
+                                <button id="login-submit" type="submit" class="w-50 btn btn-md rounded-0 softblue-bgcolor text-white">
                                     <i class="bi bi-door-open"></i>
                                     <span class="ms-1">Log in</span>
                                 </button>
@@ -47,9 +55,6 @@
                                 <p>
                                     <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
                                 </p>
-                                @* <p>
-                                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                                </p> *@
                                 <p>
                                     <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
                                 </p>

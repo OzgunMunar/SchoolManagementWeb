@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SchoolSystem.Web.Models;
 using System.Diagnostics;
@@ -24,6 +25,12 @@ namespace SchoolSystem.Web.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult Dashboard()
         {
             return View();
         }

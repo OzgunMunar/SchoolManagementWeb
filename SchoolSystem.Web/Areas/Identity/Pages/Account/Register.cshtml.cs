@@ -163,11 +163,11 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
             
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            
+
             if (ModelState.IsValid)
             {
-               
-                ApplicationUser user = new UserBuilder()
+
+                var user = new UserBuilder()
                     .SetFirstName(Input.FirstName)
                     .SetLastName(Input.LastName)
                     .SetAddress(Input.Address)
@@ -178,8 +178,9 @@ namespace SchoolSystem.Web.Areas.Identity.Pages.Account
                     .SetPhoneNumber(Input.PhoneNumber)
                     .SetCreatedByUserGuid(Input.CreatedByUserGuid)
                     .SetUpdatedByUserGuid(Input.UpdatedByUserGuid)
-                    .SetIsActive(Input.IsActive)
+                    .SetIsActive(true)
                     .BuildUser();
+
 
                 string userName = $"{Input.FirstName}{Input.LastName}";
 

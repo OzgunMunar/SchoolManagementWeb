@@ -43,11 +43,15 @@ html {
 }
 
 body {
-    background-color: whitesmoke !important;
+    /*background-color: whitesmoke !important;*/
+    background: rgb(131,58,180);
+    background: linear-gradient( 135deg, 
+    rgba(131, 58, 180, 0.075) 23%, /* Adjust the last value for opacity (0 to 1) */
+    rgba(253, 29, 29, 0.075) 27%, 
+    rgba(252, 176, 69, 0.075) 71% );
 }
 
 .footer-part {
-    /*position: absolute;*/
     width: 100%;
     bottom: 0;
     white-space: nowrap;
@@ -118,9 +122,12 @@ body {
     background-color: white !important;
 }
 
-.gradient-main-title {
-    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(24,113,226,0.5186449579831933) 150%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent; /* Fallback for browsers that do not support background-clip */
+.main-title, .carousel-caption {
+    color: dimgrey;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25) !important;
+    letter-spacing: 2px !important;
+}
+
+.active {
+    background-color: var(--oc-primarysoft) !important;
 }
