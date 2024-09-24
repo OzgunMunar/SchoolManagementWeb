@@ -5,9 +5,10 @@
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
-<div class="row bg-danger">
+
+@* <div class="row bg-danger">
+    <h3 class="text-center">@ViewData["Title"]</h3>
     <div class="col-md-6">
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
@@ -16,15 +17,174 @@
                 <label asp-for="Username" class="form-label"></label>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number." />
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
             <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
     </div>
+</div> *@
+
+
+<div class="container-full align-content-center mt-3 mb-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-4 vw-100">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <section>
+                        <h1 class="text-center">Profile</h1>
+                        <hr />
+                    </section>
+                    <section>
+                        @* asp-route-returnUrl="@Model.ReturnUrl" *@
+                        <form id="updateProfileForm" method="post">
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                            <div class="form-floating w-100 d-flex justify-content-center align-items-center">
+                                <button id="registerSubmit" type="submit" class="w-50 btn btn-md rounded-0 softblue-bgcolor text-white">
+                                    <i class="bi bi-person-plus"></i>
+                                    <span class="ms-1">Register</span>
+                                </button>
+                            </div>
+
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+@* 
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text">@@</span>
+        <input asp-for="Input.Email" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="Name@example.com" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+        <input asp-for="Input.Password" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="Password" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-check"></i></span>
+        <input asp-for="Input.ConfirmPassword" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="Confirm Password" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+        <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select form-select-md">
+            <option disabled selected>Select Role</option>
+        </select>
+    </div>
+    <div>
+        <span asp-validation-for="Input.Role" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input asp-for="Input.FirstName" class="form-control form-control-md" autocomplete="off" aria-required="true" placeholder="First Name" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input asp-for="Input.LastName" class="form-control form-control-md" aria-expanded="off" aria-required="true" placeholder="Last Name" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+        <input asp-for="Input.PhoneNumber" class="form-control form-control-md" aria-expanded="off" aria-required="true" placeholder="(###) ### ## ##" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-gift"></i></span>
+        <input type="date" asp-for="Input.BirthDay" class="form-control form-control-md" aria-required="true" placeholder="Birth Day" value="dd-mm-yyyy" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.BirthDay" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
+        <select asp-for="Input.Gender" asp-items="@Model.Input.GenderList" class="form-select form-select-md">
+            <option disabled selected>Select Gender</option>
+        </select>
+    </div>
+    <div>
+        <span asp-validation-for="Input.Gender" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-globe-americas"></i></span>
+        <select asp-for="Input.NationalityGuid" asp-items="@Model.Input.NationalityList" class="form-select form-select-md">
+            <option disabled selected>Select Nationality</option>
+        </select>
+    </div>
+    <div>
+        <span asp-validation-for="Input.NationalityGuid" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person-bounding-box"></i></span>
+        <input asp-for="Input.ProfilePictureURL" class="form-control form-control-md" autocomplete="off" aria-required="false" placeholder="Profile Picture URL" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.ProfilePictureURL" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-house"></i></span>
+        <input asp-for="Input.Address" class="form-control form-control-md" aria-expanded="off" aria-required="true" placeholder="Address" />
+    </div>
+    <div>
+        <span asp-validation-for="Input.Address" class="text-danger"></span>
+    </div>
+</div>
+<hr /> *@

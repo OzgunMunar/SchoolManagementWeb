@@ -1,7 +1,125 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "Dashboard";
 }
 
+<div class="container-full">
+
+    <div class="row">
+
+        <div class="col-12">
+            
+            <div class="row d-flex justify-content-between align-items-center flex-row">
+                
+                <div class="col">
+                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                        <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
+                        <span class="display-5 fw-bold">2</span>
+                        <span class="text-secondary mt-2">Admins</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                        <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
+                        <span class="display-5 fw-bold">24</span>
+                        <span class="text-secondary mt-2">Teachers</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                        <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
+                        <span class="display-5 fw-bold">460</span>
+                        <span class="text-secondary mt-2">Students</span>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                        <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
+                        <span class="display-5 fw-bold">382</span>
+                        <span class="text-secondary mt-2">Parents</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-evenly flex-row">
+
+                <div class="col-5 h-100 alert-success rounded-3 p-3">
+
+                    <h1 class="display-5 mb-3">Students</h1>
+                    <canvas id="PieChart" style=""></canvas>
+
+                </div>
+
+                <div class="col-5 h-100 alert-success rounded-3 p-3">
+
+                    <h1 class="display-5 mb-3">Attendance</h1>
+                    <canvas id="AttendanceChart" style=""></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        @* <div class="col-4">
+
+        </div> *@
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<script>
+    const xValuesAtt = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    const yValuesAtt = [458, 459, 460, 458, 457, 440];
+    const barColorsAtt = ["#CD5C5C", "#708238", "#ADD8E6", "#E26310", "#8A3324"];
+
+    new Chart("AttendanceChart", {
+        type: "bar",
+        data: {
+            labels: xValuesAtt,
+            datasets: [{
+                backgroundColor: barColorsAtt,
+                data: yValuesAtt
+            }]
+        },
+        options: {
+            legend: { 
+                display: false
+            },
+            title: {
+                display: false
+            }
+        }
+    });
+
+    const xValuesPie = ["Men: 49%", "Women: 51%"];
+    const yValuesPie = [49, 51];
+    const barColorsPie = [
+        "#b91d47",
+        "#00aba9"
+    ];
+
+    new Chart("PieChart", {
+        type: "pie",
+        data: {
+            labels: xValuesPie,
+            datasets: [{
+                backgroundColor: barColorsPie,
+                data: yValuesPie
+            }]
+        },
+        options: {
+            title: {
+                display: false
+            }
+        }
+    });
+
+</script>
