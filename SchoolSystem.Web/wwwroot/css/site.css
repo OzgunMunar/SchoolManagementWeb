@@ -1,7 +1,6 @@
 :root {
     /*  */
     --oc-secondarysoft: #EEAECA;
-
     /* From 70% to 60% Primary Color. */
     --oc-primarysoft: #68a4fd;
     --oc-primaryvivid: #3585fd;
@@ -17,6 +16,10 @@
     /* From 70% to 60% Info Color. */
     --oc-aquasoft: #6ee0f7;
     --oc-aquavivid: #3dd6f5;
+
+    --oc--customborderfirst: #6699CC;
+    --oc--custombordersecond: #C8C8C8;
+
     --bs-font-sans-serif: "Roboto", serif;
     --bs-body-font-size: 1rem;
 }
@@ -24,7 +27,6 @@
 * {
     box-sizing: border-box;
 }
-
 
 html {
     font-size: 14px;
@@ -131,4 +133,21 @@ body {
 
 .active {
     background-color: var(--oc-primarysoft) !important;
+}
+
+.top-border-color {
+    border-top: 2px solid brown !important;
+    border-radius: 0 !important;
+}
+
+.custom-border-dashboard {
+    border-top: 2px solid var(--oc--customborderfirst);
+    border-left: 1px solid var(--oc--custombordersecond);
+    border-right: 1px solid var(--oc--custombordersecond);
+    border-bottom: 1px solid var(--oc--custombordersecond);
+    border-radius: 0.3rem;
+}
+
+.bggg {
+    background-color: #F8F8FF;
 }

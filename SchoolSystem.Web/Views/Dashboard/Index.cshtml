@@ -6,36 +6,36 @@
 
     <div class="row">
 
-        <div class="col-12">
+        <div class="col-8">
             
-            <div class="row d-flex justify-content-between align-items-center flex-row">
+            <div class="row d-flex justify-content-between align-items-center">
                 
-                <div class="col">
-                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                <div class="col p-0 me-2">
+                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column top-border-color">
                         <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
                         <span class="display-5 fw-bold">2</span>
                         <span class="text-secondary mt-2">Admins</span>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                <div class="col p-0 me-2">
+                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column top-border-color">
                         <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
                         <span class="display-5 fw-bold">24</span>
                         <span class="text-secondary mt-2">Teachers</span>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                <div class="col p-0 me-2">
+                    <div class="alert alert-primary d-flex align-items-baseline justify-content-start flex-column top-border-color">
                         <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
                         <span class="display-5 fw-bold">460</span>
                         <span class="text-secondary mt-2">Students</span>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column rounded-4" role="alert">
+                <div class="col p-0 ">
+                    <div class="alert alert-warning d-flex align-items-baseline justify-content-start flex-column top-border-color">
                         <span class="bg-light rounded-5 p-1 px-3 text-success">2024/5</span>
                         <span class="display-5 fw-bold">382</span>
                         <span class="text-secondary mt-2">Parents</span>
@@ -44,19 +44,19 @@
 
             </div>
 
-            <div class="row d-flex align-items-center justify-content-evenly flex-row">
+            <div class="row d-flex align-items-center justify-content-start flex-row">
 
-                <div class="col-5 h-100 alert-success rounded-3 p-3">
+                <div class="col-4 h-100 alert-success p-3 top-border-color">
 
-                    <h1 class="display-5 mb-3">Students</h1>
-                    <canvas id="PieChart" style=""></canvas>
+                    <h1 class="display-5">Students</h1>
+                    <canvas id="PieChart" style="height: 25vh" class="w-100"></canvas>
 
                 </div>
+                <div class="col-1"></div>
+                <div class="col-7 h-100 alert-success p-3 top-border-color">
 
-                <div class="col-5 h-100 alert-success rounded-3 p-3">
-
-                    <h1 class="display-5 mb-3">Attendance</h1>
-                    <canvas id="AttendanceChart" style=""></canvas>
+                    <h1 class="display-5">Attendance</h1>
+                    <canvas id="AttendanceChart" style="height: 25vh" class="w-100"></canvas>
 
                 </div>
 
@@ -64,18 +64,109 @@
 
         </div>
 
-        @* <div class="col-4">
+        <div class="col-4">
+            <div id="calendar" class="alert alert-light top-border-color h-100 w-100"></div>
+        </div>
 
-        </div> *@
+    </div>
+
+    <div class="row mt-3 d-flex justify-content-between" style="height: 400px">
+
+        <div class="col-5 alert alert-secondary d-flex align-items-baseline justify-content-start flex-column top-border-color p-2 position-relative">
+
+            <span class="text-dark display-5 mb-3">Important Notifications</span>
+            
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 softred-bgcolor text-muted">
+                <span class="fw-normal fs-5">Password Change!</span>
+                <span class="fw-normal fs-7">School's Vice-principle has changed his password. It's waiting one of the admin's approval.</span>
+            </div>
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 softyellow-bgcolor text-muted">
+                <span class="fw-normal fs-5">Parent Satisfaction</span>
+                <span class="fw-normal fs-7">Most of the parents have voted 4.8/5 stars for the last parent meeting in the school for the website.</span>
+            </div>
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 softgreen-bgcolor text-muted">
+                <span class="fw-normal fs-5 text-muted">Vice-Principal Approved Finance Section of The Web Portal</span>
+                <span class="fw-normal fs-7 text-secondary">Vice president liked your contribution!</span>
+            </div>
+
+            <button class="text-muted fs-10 align-self-center pe-2 border border-none bg-transparent position-absolute bottom-0 pb-3">
+                <span class="text-decoration-underline">View All</span>
+                <i class="bi bi-arrow-up-right-square-fill mb-2"></i>
+            </button>
+
+        </div>
+
+        <div class="col-2"></div>
+
+        <div class="col-5 alert alert-secondary d-flex align-items-baseline justify-content-start flex-column top-border-color p-2 position-relative">
+
+            <span class="text-dark display-5 mb-3">Upcoming Events</span>
+
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 bggg">
+                <span class="fw-normal fs-5 text-muted">Holiday!</span>
+                <span class="fw-normal fs-7 text-secondary">School closed during the holiday as of September 2, 2024. See you around on September 4.</span>
+            </div>
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 bggg">
+                <span class="fw-normal fs-5 text-muted">Monthly Reading Rendezvouz!</span>
+                <span class="fw-normal fs-7 text-secondary">Professor will be waiting for you to read and argue about texts of John Steinback starting by 10th of September to 13th of September.</span>
+            </div>
+            <div class="container-fluid custom-border-dashboard d-flex align-items-start flex-column py-2 px-3 mb-3 bggg">
+                <span class="fw-normal fs-5 text-muted">Cheap Appliances Trade!</span>
+                <span class="fw-normal fs-7 text-secondary">Vice president of our school decided to sell used computers for affordable prices. Don't forget to come by and check the prices!</span>
+            </div>
+
+            <button class="text-muted fs-10 align-self-center pe-2 border border-none bg-transparent position-absolute bottom-0 pb-3">
+                <span class="text-decoration-underline">View All</span>
+                <i class="bi bi-arrow-up-right-square-fill mb-2"></i>
+            </button>
+
+        </div>
 
     </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            
+            themeSystem: 'bootstrap5',
+            timeZone: 'UTC',
+            initialView: 'dayGridMonth',
+            events: [
+                {
+                    id: 1,
+                    title: 'Cheap Appliances Sell',
+                    start: '2024-09-23',
+                    end: '2024-09-27'
+                },
+                {
+                    id: 2,
+                    title: 'Monthly Reading Meeting',
+                    start: '2024-09-10',
+                    end: '2024-09-14'
+                },
+                {
+                    id: 3,
+                    title: 'Holiday',
+                    start: '2024-09-02',
+                    end: '2024-09-04'
+                }
+            ],
+            editable: true,
+            selectable: true
+        });
+
+        calendar.render();
+    });
+
     const xValuesAtt = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     const yValuesAtt = [458, 459, 460, 458, 457, 440];
     const barColorsAtt = ["#CD5C5C", "#708238", "#ADD8E6", "#E26310", "#8A3324"];
@@ -90,6 +181,8 @@
             }]
         },
         options: {
+            responsive: false,
+            maintainAspectRatio: false,
             legend: { 
                 display: false
             },
@@ -116,6 +209,8 @@
             }]
         },
         options: {
+            responsive: false,
+            maintainAspectRatio: false,
             title: {
                 display: false
             }
